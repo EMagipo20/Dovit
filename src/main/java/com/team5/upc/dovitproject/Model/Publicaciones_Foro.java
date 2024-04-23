@@ -1,29 +1,37 @@
 package com.team5.upc.dovitproject.Model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Publicaciones_Foro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "idPublicaciones")
+    private Integer id;
+
+    @Column(name = "titulo")
     private String titulo;
-    private String Contenido;
-    private Date Fecha_publicacion = new Date();
-    private Date Ultima_actualizacion = new Date();
-    private int Cantidad_respuestas;
-    private int Cantidad_likes;
+
+    @Column(name = "contenido")
+    private String contenido;
+
+    //Relaciones
+    @ManyToOne
+    @JoinColumn(name = "idDonante")
+    private Donante donante;
 
     @ManyToOne
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "idUsuario", nullable = false)
     private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "idOrganizacion")
+    private Organizacion organizacion;
+
+    @ManyToOne
+    @JoinColumn(name = "idForo")
+    private Foros foros;
 }
