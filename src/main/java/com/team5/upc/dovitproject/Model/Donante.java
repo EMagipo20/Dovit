@@ -1,33 +1,43 @@
 package com.team5.upc.dovitproject.Model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Donante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
-    private String NombreCompleto;
-    private char DNI;
-    private String Direccion;
-    private String Telefono;
-    private String Foto;
+    @Column(name = "idDonante")
+    private int idDonante;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id", referencedColumnName = "id") // usuario_id es la FK
+    @Column(name = "nombreCompleto")
+    private String nombreCompleto;
+
+    @Column(name = "contactoTelefonico")
+    private String contactoTelefonico;
+
+    @Column(name = "departamento")
+    private String departamento;
+
+    @Column(name = "distrito")
+    private String distrito;
+
+    @Column(name = "direccion")
+    private String direccion;
+
+    //Relaciones
+
+    @OneToOne
+    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario") // El nombre debe coincidir con el de Usuario
     private Usuario usuario;
 
     @OneToMany(mappedBy = "donante")
     private List<Donaciones> donaciones;
 
     @OneToMany(mappedBy = "donante")
-    private List<Suscripciones> suscripciones;
+    private List<Comentarios> comentarios;
+
+    @OneToMany(mappedBy = "donante")
+    private List<Publicaciones_Foro> publicaciones_foro;
 }
