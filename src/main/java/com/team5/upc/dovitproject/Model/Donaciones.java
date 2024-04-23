@@ -36,4 +36,5 @@ public class Donaciones {
     @ManyToOne
     @JoinColumn(name = "metodo_pago_id")
     private Metodos_pago metodoPago;
+
 }
