@@ -1,5 +1,6 @@
 package com.team5.upc.dovitproject.securities;
 
+
 import com.team5.upc.dovitproject.serviceimplements.JwtUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
@@ -14,8 +15,10 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+
 import java.io.IOException;
 
+//Clase 6
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
@@ -64,4 +67,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
         chain.doFilter(request, response);
     }
+
+
 }
