@@ -3,7 +3,7 @@ package com.team5.upc.dovitproject.dto;
 public class UsuarioDto {
     private int id;
     private String username;
-    private String contrasenia;
+    private String password;
     private String email;
     private Boolean enabled;
 
@@ -24,11 +24,11 @@ public class UsuarioDto {
     }
 
     public String getPassword() {
-        return contrasenia;
+        return password;
     }
 
     public void setPassword(String password) {
-        this.contrasenia = password;
+        this.password = password;
     }
 
     public String getEmail() { return email; }

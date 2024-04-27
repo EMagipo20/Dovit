@@ -5,7 +5,6 @@ import com.team5.upc.dovitproject.dto.RolDto;
 import com.team5.upc.dovitproject.serviceinterfaces.RolService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Role;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.team5.upc.dovitproject.Model;
 
 import jakarta.persistence.*;
-import java.util.Date;
+
 import java.util.List;
 
 @Entity
