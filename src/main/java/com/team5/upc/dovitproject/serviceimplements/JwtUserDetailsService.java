@@ -45,7 +45,7 @@ public class JwtUserDetailsService implements UserDetailsService {
             roles.add(new SimpleGrantedAuthority(rol.getRol()));
         });
 
-        UserDetails ud = new User(user.getUsername(), user.getPassword(), user.getEnabled(), true, true, true, roles);
+        UserDetails ud = new org.springframework.security.core.userdetails.User(user.getUsername(), user.getContrasenia(), user.getEnabled(), true, true, true, roles);
 
         return ud;
     }

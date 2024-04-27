@@ -2,6 +2,9 @@ package com.team5.upc.dovitproject.Model;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+import java.util.List;
+
 @Entity
 public class Publicaciones_Foro {
     @Id
@@ -19,6 +22,10 @@ public class Publicaciones_Foro {
     @ManyToOne
     @JoinColumn(name = "idDonante")
     private Donante donante;
+
+    @ManyToOne
+    @JoinColumn(name = "idUsuario", nullable = false)
+    private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "idOrganizacion")

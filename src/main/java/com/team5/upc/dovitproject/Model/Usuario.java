@@ -2,6 +2,7 @@ package com.team5.upc.dovitproject.Model;
 
 import jakarta.persistence.*;
 
+import javax.xml.namespace.QName;
 import java.util.Date;
 import java.util.List;
 
@@ -19,8 +20,8 @@ public class Usuario {
     @Column(name = "email", length = 50)
     private String email;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "contrasenia", length = 8)
+    private String contrasenia;
 
     @Column(name = "enabled")
     private Boolean enabled;
@@ -56,12 +57,12 @@ public class Usuario {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.contrasenia = contrasenia;
     }
 
     public String getEmail() { return email; }

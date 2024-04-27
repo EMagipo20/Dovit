@@ -5,6 +5,7 @@ import com.team5.upc.dovitproject.dto.UsuarioDto;
 import com.team5.upc.dovitproject.serviceinterfaces.UsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +24,7 @@ public class UsuarioController {
     public void registrar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
         Usuario u = m.map(dto, Usuario.class);
-        String encodedPassword = passwordEncoder.encode(u.getPassword());
+        String encodedPassword = passwordEncoder.encode(u.getContrasenia());
         u.setPassword(encodedPassword);
         uS.insert(u);
     }
