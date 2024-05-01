@@ -16,4 +16,8 @@ public class Foros {
 
     @OneToMany(mappedBy = "foros")
     private List<Publicaciones_Foro> publicaciones_foro;
+
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "proyecto_id")
+    private Proyecto proyecto;
 }

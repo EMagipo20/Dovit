@@ -48,4 +48,7 @@ public class Proyecto {
 
     @OneToMany(mappedBy = "proyecto")
     private List<Comentarios> comentarios;
+
+    @OneToMany (mappedBy = "proyecto", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Foros> foros;
 }

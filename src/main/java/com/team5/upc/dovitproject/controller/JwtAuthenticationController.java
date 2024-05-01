@@ -1,8 +1,8 @@
 package com.team5.upc.dovitproject.controller;
 
-import com.team5.upc.dovitproject.securities.JwtRequest;
-import com.team5.upc.dovitproject.securities.JwtResponse;
-import com.team5.upc.dovitproject.securities.JwtTokenUtil;
+import com.team5.upc.dovitproject.security.JwtRequest;
+import com.team5.upc.dovitproject.security.JwtResponse;
+import com.team5.upc.dovitproject.security.JwtTokenUtil;
 import com.team5.upc.dovitproject.serviceimplements.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
