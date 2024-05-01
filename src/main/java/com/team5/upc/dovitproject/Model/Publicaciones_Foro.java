@@ -24,10 +24,6 @@ public class Publicaciones_Foro {
     private Donante donante;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario", nullable = false)
-    private Usuario usuario;
-
-    @ManyToOne
     @JoinColumn(name = "idOrganizacion")
     private Organizacion organizacion;
 

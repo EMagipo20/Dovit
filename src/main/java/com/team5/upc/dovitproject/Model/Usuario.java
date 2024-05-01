@@ -20,8 +20,8 @@ public class Usuario {
     @Column(name = "email", length = 50)
     private String email;
 
-    @Column(name = "contrasenia", length = 8)
-    private String contrasenia;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "enabled")
     private Boolean enabled;
@@ -57,12 +57,12 @@ public class Usuario {
         this.username = username;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
-        this.contrasenia = contrasenia;
+        this.password = password;
     }
 
     public String getEmail() { return email; }

@@ -1,4 +1,4 @@
-package com.team5.upc.dovitproject.securities;
+package com.team5.upc.dovitproject.security;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,6 +11,7 @@ import java.io.Serializable;
 
 @Component
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {
+
     private static final long serialVersionUID = -7858869558953243875L;
 
     @Override

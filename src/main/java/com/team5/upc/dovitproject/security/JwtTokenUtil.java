@@ -1,4 +1,4 @@
-package com.team5.upc.dovitproject.securities;
+package com.team5.upc.dovitproject.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -16,8 +16,10 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+//Clase 1
 @Component
 public class JwtTokenUtil implements Serializable {
+
     private static final long serialVersionUID = -2550185165626007488L;
 
     //milisegundos || 18 minutos, le quitamos mil 18 segundos demo

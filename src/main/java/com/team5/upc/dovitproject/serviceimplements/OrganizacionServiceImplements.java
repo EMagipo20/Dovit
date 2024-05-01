@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.List;
-
-import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
 
 @Service
 public class OrganizacionServiceImplements implements OrganizacionService {
@@ -19,6 +16,9 @@ public class OrganizacionServiceImplements implements OrganizacionService {
     public OrganizacionServiceImplements(OrganizacionRepository organizacionRepository) {
         this.organizacionRepository = organizacionRepository;
     }
+
+    @Override
+    public void InsertarOrganizacion(Organizacion organizacion) {}
 
     @Override
     public List<Organizacion> findAllOrganizaciones() {
